@@ -43,19 +43,13 @@ describe("Add To Cart Feature", () => {
     AddToCartPom.deleteButton();
  })
  
- it ("Verify Success Purchase Product from cart", () => {
+ 
+ it ("Verify Failed Purchase Product from cart with empty form", () => {
+    AddToCartPom.addToCartProduct();
     AddToCartPom.viewCart();
+    AddToCartPom.viewProductinCart(); 
     AddToCartPom.placeOrder();
-    AddToCartPom.inputName();
-    AddToCartPom.inputCountry();
-    AddToCartPom.inputCity();
-    AddToCartPom.inputCard();
-    AddToCartPom.inputMonth();
-    AddToCartPom.inputYear();
-    AddToCartPom.purchaseButton();
-    AddToCartPom.successMessage();
-    AddToCartPom.confrimButton();
-
+    AddToCartPom.purchaseButton();   
  })
 
 
